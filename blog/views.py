@@ -2,8 +2,8 @@ from django.shortcuts import render
 from .models import Post
 
 # Create your views here.
-def blog_list(request, *args, *kwargs)
-	blog_list = Post.objects.filter(published = True)
+def blog_list(request, *args, **kwargs):
+	post_list = Post.objects.filter(published = True)
 	template_name = "post_list.html"
 
 	context = {
@@ -11,5 +11,3 @@ def blog_list(request, *args, *kwargs)
 	}
 
 	return render(request, template_name, context)
-
-
