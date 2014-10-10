@@ -1,0 +1,15 @@
+from django.shortcuts import render
+from .models import Post
+
+# Create your views here.
+def blog_list(request, *args, *kwargs)
+	blog_list = Post.objects.filter(published = True)
+	template_name = "post_list.html"
+
+	context = {
+		"post_list": post_list
+	}
+
+	return render(request, template_name, context)
+
+

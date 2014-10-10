@@ -22,7 +22,7 @@ SECRET_KEY = '4+yt0hd$%_qd^s010770ata-#&r*h0vg^o)^w5=*cu-k6#5en^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     ('Art Mills', 'art@hamcois.com'),
@@ -44,9 +44,12 @@ DJANGO_APPS = (
     'django.contrib.staticfiles',
 )
 
-THIRD_PARTY_APPS = ()
+THIRD_PARTY_APPS = (
+)
 
-LOCAL_APPS = ()
+LOCAL_APPS = (
+    'blog',
+)
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -116,7 +119,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 
-    "/templates",
+    "/vagrant/projects/microblog/microblog/templates",
 )
 
 # Static files (CSS, JavaScript, Images)
