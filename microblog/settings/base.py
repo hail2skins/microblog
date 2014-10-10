@@ -64,6 +64,19 @@ ROOT_URLCONF = 'microblog.urls'
 
 WSGI_APPLICATION = 'microblog.wsgi.application'
 
+
+# Database
+# https://docs.djangoproject.com/en/1.7/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'microblog',
+        'USER': 'vagrant',
+        'PASSWORD': 'password',
+    }
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
